@@ -158,9 +158,18 @@ inline int test_main(int argc, char *argv[], char *algoname, std::pair< std::pai
     }
 
     cout << " * result: size = " << res.second << ", max offset = " << maxoffset << endl;
-    testTm.reportNext(" * Total time:");
+    //testTm.reportNext(" * Total time:");
   
     printf("***************** TEST ENDED *****************\n\n");
+
+    std::cout << "RESULT"
+              << " algo=plz77"
+              << " input=" << path
+              << " input_size=" << n
+              << " threads=" << p
+              << " time_in_ms=" << testTm.next() * 1000
+              << std::endl;
+    
     free(res.first);
   }
   free(s);
